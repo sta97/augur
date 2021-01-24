@@ -103,11 +103,11 @@ class ContributorBreadthWorker(Worker):
 
                 repo_cntrb = {
                     "cntrb_id": repo_cntrb_dict['cntrb_id']
-                    "event_id": repo_cntrb_dict['id'],
-                    "event_type": repo_cntrb_dict['type'],
+                    "repo_git": repo_cntrb_dict['repo']['url'],
                     "repo_id": repo_cntrb_dict['repo']['id'],
                     "repo_name": repo_cntrb_dict['repo']['name'],
-                    "repo_url": repo_cntrb_dict['repo']['url'],
+                    "event_id": repo_cntrb_dict['id'],
+                    "cntrb_category": repo_cntrb_dict['type'],
                     "created_at": repo_cntrb_dict['created_at'],
                     "tool_source": self.tool_source,
                     "tool_version": self.tool_version,
